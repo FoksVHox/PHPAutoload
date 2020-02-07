@@ -14,6 +14,7 @@ class Config
     private $Version = '1.0';
     private static $Name = ''; // Name of the name
     private static $Salt = ''; // Create your own salt key!
+    private static $Est = '2019'; // The establish date of the website
 
     // Is the app in development?
     private static $InDevelopment = true;
@@ -42,5 +43,10 @@ class Config
     public function getSaltKey()
     {
         return self::$Salt;
+    }
+
+    public function getEstDate()
+    {
+        return self::$Est;
     }
 }

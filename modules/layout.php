@@ -35,7 +35,7 @@ class Layout
         ?>
             <footer class="mt-auto text-center text-muted">
                 <!-- Didn't know what to add in this footer so whatever -->
-                <p>© <?=Config::i()->getName()?> 2019 - 2020</p>
+                <p>© <?=Config::i()->getName()?> <?=Config::i()->getEstDate()?> - <?=date("Y")?></p>
             </footer>
             <script src="/vendor/jquery-3.4.1/jquery.min.js"></script>
             <script src="/vendor/popper-1.14.7/popper.min.js"></script>
