@@ -32,5 +32,10 @@ class SQL
 		$stmt->execute();
 		$columns = $stmt->fetchAll(PDO::FETCH_COLUMN);
 		return $columns;
-	}
+    }
+    public function MakeTable($sql)
+    {
+        $stmt = $this->conn(NULL)->prepare($sql);
+        return $stmt->execute();
+    }
 }
