@@ -12,8 +12,8 @@ class Config
         'default_database' => '',
     ];
     private $Version = '1.0';
-    private static $Name = ''; // Name of the name
-    private static $Salt = ''; // Create your own salt key!
+    private static $Name = 'PHP Autoload'; // Name of the name
+    private static $Salt = '5e4978dcd24d4'; // Create your own salt key! I suggest you use uniqid() for generating the salt key.
     private static $Est = '2019'; // The establish date of the website
 
     // Is the app in development?
