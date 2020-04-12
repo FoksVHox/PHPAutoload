@@ -1,20 +1,29 @@
 <?php
+
 // This file defines our used traits and autoloading for our classes, and should be included in all other PHP files in the project.
 // Singleton trait for classes. Read here for more info on Singleton patterns in PHP https://stackoverflow.com/a/24852235
-trait Singleton 
+trait Singleton
 {
     private static $instance;
-    
-    private final function __construct() {}
-    private final function __clone() {}
-    private final function __wakeup() {}
-    
-    public final static function i()
+
+    final private function __construct()
     {
-        if(!self::$instance) {
-            self::$instance = new self;    
+    }
+
+    final private function __clone()
+    {
+    }
+
+    final private function __wakeup()
+    {
+    }
+
+    final public static function i()
+    {
+        if (!self::$instance) {
+            self::$instance = new self();
         }
-        
+
         return self::$instance;
     }
 }
@@ -22,7 +31,7 @@ trait Singleton
 date_default_timezone_set('Europe/Copenhagen');
 // Register the class autoloading function
 spl_autoload_register(function ($class_name) {
-    include 'modules/' . strtolower($class_name) . '.php';
+    include 'modules/'.strtolower($class_name).'.php';
 });
 // Cookie parameters
 session_set_cookie_params(
