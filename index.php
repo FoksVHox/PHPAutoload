@@ -1,9 +1,9 @@
-<?php 
+<?php
     require '_init.php';
     Layout::i()->header();
     Layout::i()->nav();
 ?>
 
-<?php 
+<?php
     Layout::i()->footer();
 ?>
